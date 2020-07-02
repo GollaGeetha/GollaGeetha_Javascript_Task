@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script> 
+function login()								 
+{ 		 
+	var email = document.forms["RegForm"]["EMail"]; 
+	var password = document.forms["RegForm"]["Password"]; 
+	if (email.value == "")								 
+	{ 
+		window.alert("Please enter a valid e-mail address."); 
+		email.focus(); 
+		return false; 
+	} 
+	if (password.value == "")					 
+	{ 
+		window.alert("Please enter a valid password"); 
+		password.focus(); 
+		return false; 
+	}
+         
+                    
+	return true; 
+}
+</script> 
+<style>
+   login {										 
+	margin-left: 70px; 
+	font-weight: bold ; 
+	float: left; 
+	clear: left; 
+	width: 100px; 
+	text-align: left; 
+	margin-right: 10px; 
+	font-family:sans-serif,bold, Arial; 
+	font-size:14px; 
+} 
+
+
+
+form {										 
+	margin: 0 auto; 
+	width: 600px; 
+}
+</style> 
+
+</style>
+</head>
+<body> 
+<h1 style="text-align: center">LOGIN FORM </h1>		 
+<form name="loginform" onsubmit="return login()" method="post"> 
+	
+	<p>E-mail Address: <input type="text" size=65 name="EMail"> </h3><br><br>
+	<p>Password:   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" size=65 name="Password"> </h3><br> 
+	<center><p><input type="submit" value="Login" name="Submit"></center>	 
+		 
+	</p>		 
+</form> 
+</body>
